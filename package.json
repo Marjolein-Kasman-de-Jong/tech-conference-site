@@ -1,0 +1,26 @@
+{
+  "name": "tech-conference-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.1.6",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.4",
+    "readdirp": "^5.0.0",
+    "sass": "^1.101.0",
+    "source-map-js": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "nodemon --watch assets/scss --watch base --watch components --watch layout --watch template-parts -e scss --exec \"sass assets/scss/main.scss assets/css/main.css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
