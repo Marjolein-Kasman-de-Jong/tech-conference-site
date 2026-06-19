@@ -70,4 +70,20 @@ video {
   max-width: 100%;
 }
 
+:root {
+  --color-neutral-900: #00151d;
+  --color-neutral-800: #002a34;
+  --color-neutral-600: #334e56;
+  --color-neutral-500: #4b5e65;
+  --color-neutral-200: #c4c7c8;
+  --color-neutral-100: #fcf2ef;
+  --color-green-200: #d9ff66;
+  --color-yellow-100: #ffcf8a;
+  --color-red-100: #fec1c3;
+  --color-red-300: #ff7378;
+  --color-cyan-100: #a5e5fc;
+  --color-purple-100: #c8bdfd;
+  --color-blue-100: #b8d8ff;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+@use '../base/breakpoints' as *;
+
+@mixin text-preset-1($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "Chakra Petch", sans-serif;
+    line-height: 100%;
+    letter-spacing: -2px;
+    font-size: 2.375rem;
+    font-weight: $weight;
+    color: $color;
+
+    @media screen and (min-width: $breakpoint-s) {
+        font-size: 5rem;
+    }
+}
+
+@mixin text-preset-2($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "Chakra Petch", sans-serif;
+    line-height: 110%;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    font-weight: $weight;
+    color: $color;
+
+    @media screen and (min-width: $breakpoint-s) {
+        font-size: 1.75rem;
+
+        @media screen and (min-width: $breakpoint-m) {
+            line-height: 120%;
+            font-size: 2rem;
+        }
+    }
+}
+
+@mixin text-preset-3($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "Chakra Petch", sans-serif;
+    line-height: 130%;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin text-preset-4($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "Chakra Petch", sans-serif;
+    line-height: 140%;
+    letter-spacing: 0;
+    font-size: 1.25rem;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin text-preset-5($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "JetBrains Mono", sans-serif;
+    line-height: 140%;
+    letter-spacing: 0;
+    font-size: 1rem;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin text-preset-6($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "JetBrains Mono", sans-serif;
+    line-height: 140%;
+    letter-spacing: 0;
+    font-size: 0.875rem;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin text-preset-7($weight: 400, $color: var(--color-neutral-900)) {
+    font-family: "JetBrains Mono", sans-serif;
+    line-height: 140%;
+    letter-spacing: .5px;
+    font-size: .75rem;
+    font-weight: $weight;
+    color: $color;
+}
