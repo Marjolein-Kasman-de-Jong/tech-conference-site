@@ -1,13 +1,13 @@
 <?php
 
-function enqueue_styles() {
-    // Load main.css
-    wp_enqueue_style(
-        'main-styles',
-        get_theme_file_uri('/assets/css/main.css'),
-        [],
-        filemtime(get_theme_file_path('/assets/css/main.css'))
-    );
-}
+// Theme setup
+require_once get_theme_file_path('/inc/add-title-tag.php');
 
-add_action('wp_enqueue_scripts', 'enqueue_styles');
+// Assets
+require_once get_theme_file_path('/inc/load-assets.php');
+
+// Navigation
+require_once get_theme_file_path('/inc/register-menus.php');
+
+// Custom post types
+require_once get_theme_file_path('/inc/register-post-types.php');

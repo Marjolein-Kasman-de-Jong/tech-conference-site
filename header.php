@@ -7,3 +7,6 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
+<!-- Page header -->
+<?php get_template_part('template-parts/page-header/page-header'); ?>
