@@ -10,3 +10,5 @@
 
 <!-- Page header -->
 <?php get_template_part('template-parts/page-header/page-header'); ?>
+
+<main>
