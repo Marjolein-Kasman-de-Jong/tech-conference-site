@@ -14,10 +14,15 @@
     "sass": "^1.101.0",
     "source-map-js": "^1.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "vite": "^8.0.16"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "nodemon --watch assets/scss --watch base --watch components --watch layout --watch template-parts -e scss --exec \"sass assets/scss/main.scss assets/css/main.css\""
+    "sass": "nodemon --watch assets/scss --watch base --watch components --watch layout --watch template-parts -e scss --exec \"sass assets/scss/main.scss assets/css/main.css\"",
+    "js": "vite build --watch --mode development",
+    "build:js": "vite build"
   },
   "keywords": [],
   "author": "",

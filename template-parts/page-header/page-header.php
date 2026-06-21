@@ -1,16 +1,25 @@
 <header class="page-header">
-    <div class="page-header-wrapper-left">
-        <?php bloginfo('name'); ?>
-    </div>
-    <div class="page-header-wrapper-right">
-        <nav class="page-header-nav" aria-label="Hoofdmenu">
-            <?php
+    <div class="content-wrapper">
+        <img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
+        <div class="menu-wrapper menu-closed">
+            <button id="btn-menu-open" class="btn-menu" type="button">
+                <img class="menu-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-menu.svg"
+                    alt="">
+            </button>
+            <button id="btn-menu-close" class="btn-menu" type="button">
+                <img class="close-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-cross.svg"
+                    alt="">
+            </button>
+
+            <nav class="page-header-nav" aria-label="Hoofdmenu">
+                <?php
                 wp_nav_menu([
                     'theme_location' => 'primary_menu',
                     'container' => false,
                     'menu_class' => 'page-header-nav-menu',
                 ]);
-            ?>
-        </nav>
+                ?>
+            </nav>
+        </div>
     </div>
 </header>

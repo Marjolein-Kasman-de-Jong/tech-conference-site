@@ -1,0 +1,43 @@
+@use '../base/breakpoints' as *;
+
+body {
+    background-color: var(--color-neutral-900);
+}
+
+// Main styles
+
+main {
+    position: relative;
+    z-index: 0;
+    padding-top: 64px;
+}
+
+.page-footer {
+    position: relative;
+    z-index: 0;
+}
+
+// Main sections layout
+
+.page-header,
+section,
+.page-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header>.content-wrapper,
+section>.content-wrapper,
+.page-footer>.content-wrapper {
+    width: 91.47%;
+
+    @media screen and (min-width: $breakpoint-s) {
+        width: 94.79%;
+
+        @media screen and (min-width: $breakpoint-m) {
+            width: 94.44%;
+        }
+    }
+}

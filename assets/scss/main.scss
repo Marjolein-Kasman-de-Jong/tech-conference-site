@@ -4,5 +4,7 @@
 @use "../../base/breakpoints";
 @use "../../base/typography";
 
+@use "../../layout/general-styles";
+
 @use "../../template-parts/page-header/page-header";
 @use "../../template-parts/page-footer/page-footer";
