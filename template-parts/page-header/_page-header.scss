@@ -52,11 +52,15 @@ main {
 
                 &#btn-menu-close {
                     display: flex;
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        display: none;
+                    }
                 }
             }
 
             .page-header-nav {
-                background-color: var(--color-neutral-800);
+                background-color: var(--color-neutral-900);
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -68,13 +72,29 @@ main {
                 justify-content: center;
                 transition: transform .3s ease-in-out;
 
+                @media screen and (min-width: $breakpoint-s) {
+                    position: relative;
+                    top: unset;
+                    left: unset;
+                    z-index: unset;
+                    width: unset;
+                    height: unset;
+                    padding-top: unset;
+                    transition: unset;
+                }
+
                 .page-header-nav-menu {
-                    border: 1px solid red;
                     width: 91.47%;
                     padding: 24px 0;
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        width: unset;
+                        padding: unset;
+                        flex-direction: row;
+                    }
 
                     .menu-item {
                         width: 100%;
@@ -90,18 +110,20 @@ main {
                             }
                         }
 
-                        &.current-menu-item {
-                            border: 1px solid var(--color-green-200);
-                            box-shadow: 2px 2px 0 0 var(--color-green-200);
+                        @media screen and (min-width: $breakpoint-s) {
+                            // padding: 0 24px;
 
-                            a:link,
-                            a:visited,
-                            a:hover,
-                            a:active {
-                                color: var(--color-green-200);
+                            @media screen and (min-width: $breakpoint-m) {
+                                transition: box-shadow .3s ease-in-out;
                             }
                         }
-                        
+
+                        &:hover {
+                            @media screen and (min-width: $breakpoint-m) and (hover: hover) and (pointer: fine) {
+                                box-shadow: 2px 2px 0 0 var(--color-neutral-100);
+                            }
+                        }
+
                         a:link,
                         a:visited,
                         a:hover,
@@ -114,6 +136,22 @@ main {
                             @include text-preset-6($color: #FFF, $weight: 500);
                             text-transform: uppercase;
                             text-decoration: none;
+
+                            @media screen and (min-width: $breakpoint-s) {
+                                padding: 0 24px;
+                            }
+                        }
+
+                        &.current-menu-item {
+                            border: 1px solid var(--color-green-200);
+                            box-shadow: 2px 2px 0 0 var(--color-green-200);
+
+                            a:link,
+                            a:visited,
+                            a:hover,
+                            a:active {
+                                color: var(--color-green-200);
+                            }
                         }
                     }
                 }
@@ -123,6 +161,10 @@ main {
                 .btn-menu {
                     &#btn-menu-open {
                         display: flex;
+
+                        @media screen and (min-width: $breakpoint-s) {
+                            display: none;
+                        }
                     }
 
                     &#btn-menu-close {
@@ -133,11 +175,21 @@ main {
                 .page-header-nav {
                     transform: translateY(-100vh);
 
+                    @media screen and (min-width: $breakpoint-s) {
+                        transform: unset;
+                    }
+
                     .page-header-nav-menu {
                         .menu-item {
                             opacity: 0;
                             transform: translateY(-10px);
                             transition-delay: 0s;
+
+                            @media screen and (min-width: $breakpoint-s) {
+                                opacity: unset;
+                                transform: unset;
+                                transition-delay: unset;
+                            }
                         }
                     }
                 }
