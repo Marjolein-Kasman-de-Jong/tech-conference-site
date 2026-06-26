@@ -11,3 +11,9 @@ require_once get_theme_file_path('/inc/register-menus.php');
 
 // Custom post types
 require_once get_theme_file_path('/inc/register-post-types.php');
+
+// Admin customizations
+require_once get_theme_file_path('/inc/hide-editor-for-settings-page.php');
+
+// Blocks
+require_once get_theme_file_path('/inc/register-blocks.php');

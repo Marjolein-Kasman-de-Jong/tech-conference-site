@@ -10,7 +10,7 @@ function enqueue_assets() {
         filemtime(get_theme_file_path('/assets/css/main.css'))
     );
 
-    // JavaScript
+    // JavaScript - frontend
     wp_enqueue_script(
         'main-script',
         get_theme_file_uri('/assets/js/main.js'),

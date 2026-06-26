@@ -1,5 +1,5 @@
-<?php get_header(); ?>
-
-<p>Homepage template</p>
-
-<?php get_footer(); ?>
+<?php 
+get_header();
+the_content();
+get_footer(); 
+?>

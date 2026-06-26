@@ -3,6 +3,7 @@
 function register_post_types() {
     register_post_type('event', [
         'public' => true,
+        'show_in_rest' => true,
         'labels' => [
             'name' => 'Events',
             'singular_name' => 'Event',
@@ -20,11 +21,12 @@ function register_post_types() {
             'slug' => 'schedule',
         ],
         'menu_icon' => 'dashicons-calendar',
-        'supports' => ['title', 'editor', 'thumbnail'],
+        'supports' => ['title'],
     ]);
 
     register_post_type('speaker', [
         'public' => true,
+        'show_in_rest' => true,
         'labels' => [
             'name' => 'Speakers',
             'singular_name' => 'Speaker',
@@ -42,7 +44,7 @@ function register_post_types() {
             'slug' => 'speakers',
         ],
         'menu_icon' => 'dashicons-microphone',
-        'supports' => ['title', 'editor', 'thumbnail'],
+        'supports' => ['title'],
     ]);
 }
 
