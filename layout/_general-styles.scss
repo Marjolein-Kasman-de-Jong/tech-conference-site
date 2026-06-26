@@ -9,7 +9,15 @@ body {
 main {
     position: relative;
     z-index: 0;
-    padding-top: 64px;
+    padding-top: calc(64px + 32px);
+
+    @media screen and (min-width: $breakpoint-s) {
+        padding-top: calc(80px + 40px);
+
+        @media screen and (min-width: $breakpoint-m) {
+            padding-top: calc(80px + 64px);
+        }
+    }
 }
 
 .page-footer {

@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "nodemon --watch assets/scss --watch base --watch components --watch layout --watch template-parts -e scss --exec \"sass assets/scss/main.scss assets/css/main.css\"",
+    "sass": "nodemon --watch assets/scss --watch base --watch blocks --watch components --watch layout --watch template-parts -e scss --exec \"sass assets/scss/main.scss assets/css/main.css\"",
     "js": "vite build --watch --mode development",
     "build:js": "vite build"
   },

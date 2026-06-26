@@ -1,0 +1,30 @@
+@use "../../base/breakpoints" as *;
+@use "../../base/typography" as *;
+
+.hero {
+    .content-wrapper {
+        background-color: var(--color-neutral-100);
+
+        .slogan {
+            padding: 16px;
+
+            @media screen and (min-width: $breakpoint-s) {
+                padding: 20px 24px;
+
+                @media screen and (min-width: $breakpoint-m) {
+                    padding: 20px 32px;
+                }
+            }
+
+            h1 {
+                @include text-preset-1($color: var(--color-neutral-900), $weight: 700);
+                height: 152px;
+                border-bottom: 2px solid var(--color-neutral-900);
+            }
+        }
+
+        .featured-keynote {
+
+        }
+    }
+}

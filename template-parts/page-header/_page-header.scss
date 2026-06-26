@@ -10,6 +10,10 @@
     height: 64px;
     background-color: var(--color-neutral-900);
 
+    @media screen and (min-width: $breakpoint-s) {
+        height: 80px;
+    }
+
     &::before {
         content: "";
         position: absolute;
