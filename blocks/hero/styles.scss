@@ -86,11 +86,82 @@
         }
 
         .featured-keynote {
+            position: relative;
             padding: 20px 16px;
             background-color: var(--color-cyan-100);
 
-            // temp
-            display: none;
+            @media screen and (min-width: $breakpoint-s) {
+                height: 400px;
+                padding: 24px;
+                overflow: hidden;
+            }
+
+            .wrapper-left {
+                .featured-keynote-title {
+                    @include text-preset-6($color: var(--color-neutral-900), $weight: 400);
+                    text-transform: uppercase;
+                }
+
+                .featured-keynote-speaker {
+                    margin-top: 16px;
+
+                    .name {
+                        @include text-preset-2($color: var(--color-neutral-900), $weight: 700);
+                        text-transform: lowercase;
+                    }
+
+                    .role {
+                        @include text-preset-6($color: var(--color-neutral-600), $weight: 500);
+                        margin-top: 8px;
+                        text-transform: uppercase;
+                    }
+
+                    .company {
+                        @include text-preset-6($color: var(--color-neutral-600), $weight: 500);
+                        text-transform: uppercase;
+                    }
+                }
+
+                .featured-keynote-details {
+                    margin-top: 32px;
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        margin-top: 63px;
+                    }
+
+                    .title {
+                        @include text-preset-5($color: var(--color-neutral-900), $weight: 700);
+                        text-transform: uppercase;
+                    }
+
+                    .details {
+                        @include text-preset-6($color: var(--color-neutral-600), $weight: 500);
+                        margin-top: 8px;
+                    }
+                }
+
+                .button {
+                    --button-color: var(--color-neutral-900);
+                    margin-top: 24px;
+                }
+            }
+
+            .wrapper-right {
+                display: none;
+
+                @media screen and (min-width: $breakpoint-s) {
+                    position: absolute;
+                    bottom: 0;
+                    right: -67px;
+                    display: block;
+                    width: 66.11%;
+                    max-width: 481px;
+
+                    @media screen and (min-width: $breakpoint-m) {
+                        width: 87.82%;
+                    }
+                }
+            }
         }
     }
 }

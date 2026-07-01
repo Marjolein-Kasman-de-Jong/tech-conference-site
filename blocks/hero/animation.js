@@ -1,4 +1,4 @@
-// Reveals the hero slogan character by character while preserving its final line wrapping.
+// Reveals the hero slogan character by character while preserving its final line wrapping
 
 (() => {
     const typeSlogan = (heading) => {

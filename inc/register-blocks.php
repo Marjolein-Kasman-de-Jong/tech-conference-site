@@ -15,15 +15,13 @@ function register_blocks() {
     wp_register_script(
         'theme-block-editor',
         get_theme_file_uri('/assets/js/main.js'),
-        ['wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor'],
+        ['wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor', 'wp-components'],
         filemtime(get_theme_file_path('/assets/js/main.js')),
         false
     );
 
-    // Registreer block via block.json
-    $block = register_block_type(get_template_directory() . '/blocks/hero', [
-        'editor_script' => 'theme-block-editor',
-    ]);
+    // Registreer het block; block.json koppelt de editor-script-handle.
+    register_block_type(get_template_directory() . '/blocks/hero');
 }
 
 // Filter voor block categorieën

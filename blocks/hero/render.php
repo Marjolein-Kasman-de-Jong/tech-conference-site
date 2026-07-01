@@ -10,6 +10,7 @@ $abbreviation = get_field('abbreviation', $settings_page_id);
 
 $featured_keynote_title = $attributes['featuredKeynoteTitle'] ?? '';
 $button_text = $attributes['buttonText'] ?? 'View talk';
+$show_button_arrow = $attributes['showArrow'] ?? true;
 
 // Default values prevent notices when no keynote or speaker is found.
 $keynote_event_title = '';
@@ -145,14 +146,15 @@ if (!empty($keynote_events)) {
                 <h3 class="title">
                     <?php echo $keynote_event_title; ?>
                 </h3>
-                <div class="details">
+                <p class="details">
                     <?php echo implode(' / ', $keynote_event_details); ?>
-                </div>
+                </p>
             </div>
             <?php
-            get_template_part('components/button', null, [
+            get_template_part('components/button/button', null, [
                 'text' => $button_text,
                 'url' => $keynote_event_url,
+                'show_arrow' => $show_button_arrow,
             ]);
             ?>
             </div>

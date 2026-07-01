@@ -427,9 +427,117 @@ section > .content-wrapper,
   padding-top: 16px;
 }
 .hero .content-wrapper .featured-keynote {
+  position: relative;
   padding: 20px 16px;
   background-color: var(--color-cyan-100);
+}
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .featured-keynote {
+    height: 400px;
+    padding: 24px;
+    overflow: hidden;
+  }
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-title {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-neutral-900);
+  text-transform: uppercase;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker {
+  margin-top: 16px;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
+  font-family: "Chakra Petch", sans-serif;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+}
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
+    line-height: 120%;
+    font-size: 2rem;
+  }
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
+  text-transform: lowercase;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .role {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-neutral-600);
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .company {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-neutral-600);
+  text-transform: uppercase;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details {
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details {
+    margin-top: 63px;
+  }
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details .title {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  text-transform: uppercase;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details .details {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-neutral-600);
+  margin-top: 8px;
+}
+.hero .content-wrapper .featured-keynote .wrapper-left .button {
+  --button-color: var(--color-neutral-900);
+  margin-top: 24px;
+}
+.hero .content-wrapper .featured-keynote .wrapper-right {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .featured-keynote .wrapper-right {
+    position: absolute;
+    bottom: 0;
+    right: -67px;
+    display: block;
+    width: 66.11%;
+    max-width: 481px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero .content-wrapper .featured-keynote .wrapper-right {
+    width: 87.82%;
+  }
 }
 
 @keyframes slogan-cursor-blink {
@@ -444,6 +552,27 @@ section > .content-wrapper,
   .hero .slogan h1.is-complete .slogan-cursor {
     animation: none;
   }
+}
+.button:link,
+.button:visited,
+.button:hover,
+.button:active {
+  display: block;
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--button-color, var(--color-neutral-900));
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--button-color, var(--color-neutral-900));
+  box-shadow: 2px 2px 0 0 var(--button-color, var(--color-neutral-900));
 }
 
 /*# sourceMappingURL=main.css.map */
