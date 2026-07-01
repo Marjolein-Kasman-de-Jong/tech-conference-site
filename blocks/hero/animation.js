@@ -1,3 +1,5 @@
+// Reveals the hero slogan character by character while preserving its final line wrapping.
+
 (() => {
     const typeSlogan = (heading) => {
         const textElement = heading.querySelector('.slogan-text');
