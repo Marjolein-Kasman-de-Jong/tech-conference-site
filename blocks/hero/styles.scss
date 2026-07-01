@@ -7,15 +7,27 @@
         flex-direction: column;
         gap: 24px;
 
+        @media screen and (min-width: $breakpoint-m) {
+            display: grid;
+            grid-template-columns: 780fr 548fr;
+            gap: 32px;
+        }
+
         .slogan {
             padding: 16px;
             background-color: var(--color-neutral-100);
+            background-image: url("../../assets/images/bg-horizon-text.svg");
+            background-repeat: no-repeat;
+            background-size: 80.76%;
+            background-position: center;
 
             @media screen and (min-width: $breakpoint-s) {
                 padding: 20px 24px;
+                background-size: 76.1%;
 
                 @media screen and (min-width: $breakpoint-m) {
                     padding: 20px 32px;
+                    background-size: 71.03%;
                 }
             }
 
@@ -23,6 +35,14 @@
                 @include text-preset-1($color: var(--color-neutral-900), $weight: 700);
                 height: 152px;
                 border-bottom: 2px solid var(--color-neutral-900);
+
+                @media screen and (min-width: $breakpoint-s) {
+                    height: 284px;
+
+                    @media screen and (min-width: $breakpoint-m) {
+                        height: 324px;
+                    }
+                }
             }
 
             .event-details {
@@ -37,6 +57,9 @@
         .featured-keynote {
             padding: 20px 16px;
             background-color: var(--color-cyan-100);
+
+            // temp
+            display: none;
         }
     }
 }

@@ -338,18 +338,31 @@ section > .content-wrapper,
   flex-direction: column;
   gap: 24px;
 }
+@media screen and (min-width: 1200px) {
+  .hero .content-wrapper {
+    display: grid;
+    grid-template-columns: 780fr 548fr;
+    gap: 32px;
+  }
+}
 .hero .content-wrapper .slogan {
   padding: 16px;
   background-color: var(--color-neutral-100);
+  background-image: url("../../assets/images/bg-horizon-text.svg");
+  background-repeat: no-repeat;
+  background-size: 80.76%;
+  background-position: center;
 }
 @media screen and (min-width: 768px) {
   .hero .content-wrapper .slogan {
     padding: 20px 24px;
+    background-size: 76.1%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .hero .content-wrapper .slogan {
     padding: 20px 32px;
+    background-size: 71.03%;
   }
 }
 .hero .content-wrapper .slogan h1 {
@@ -369,6 +382,16 @@ section > .content-wrapper,
   height: 152px;
   border-bottom: 2px solid var(--color-neutral-900);
 }
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .slogan h1 {
+    height: 284px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero .content-wrapper .slogan h1 {
+    height: 324px;
+  }
+}
 .hero .content-wrapper .slogan .event-details {
   font-family: "JetBrains Mono", sans-serif;
   line-height: 140%;
@@ -384,6 +407,7 @@ section > .content-wrapper,
 .hero .content-wrapper .featured-keynote {
   padding: 20px 16px;
   background-color: var(--color-cyan-100);
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
