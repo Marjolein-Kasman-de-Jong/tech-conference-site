@@ -5,6 +5,16 @@
     "category": "tech-conference-site-blocks",
     "icon": "cover-image",
     "description": "Hero blok met featured keynote.",
+    "attributes": {
+        "featuredKeynoteTitle": {
+            "type": "string",
+            "default": "Featured keynote"
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "View talk"
+        }
+    },
     "supports": {
         "html": false,
         "align": false,

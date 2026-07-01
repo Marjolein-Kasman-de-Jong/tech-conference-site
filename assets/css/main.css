@@ -334,10 +334,13 @@ section > .content-wrapper,
 }
 
 .hero .content-wrapper {
-  background-color: var(--color-neutral-100);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .hero .content-wrapper .slogan {
   padding: 16px;
+  background-color: var(--color-neutral-100);
 }
 @media screen and (min-width: 768px) {
   .hero .content-wrapper .slogan {
@@ -365,6 +368,22 @@ section > .content-wrapper,
 .hero .content-wrapper .slogan h1 {
   height: 152px;
   border-bottom: 2px solid var(--color-neutral-900);
+}
+.hero .content-wrapper .slogan .event-details {
+  font-family: "JetBrains Mono", sans-serif;
+  line-height: 140%;
+  letter-spacing: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-neutral-900);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+.hero .content-wrapper .featured-keynote {
+  padding: 20px 16px;
+  background-color: var(--color-cyan-100);
 }
 
 /*# sourceMappingURL=main.css.map */

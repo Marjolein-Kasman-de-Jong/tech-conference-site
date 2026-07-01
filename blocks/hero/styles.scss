@@ -3,10 +3,13 @@
 
 .hero {
     .content-wrapper {
-        background-color: var(--color-neutral-100);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
 
         .slogan {
             padding: 16px;
+            background-color: var(--color-neutral-100);
 
             @media screen and (min-width: $breakpoint-s) {
                 padding: 20px 24px;
@@ -21,10 +24,19 @@
                 height: 152px;
                 border-bottom: 2px solid var(--color-neutral-900);
             }
+
+            .event-details {
+                @include text-preset-6($color: var(--color-neutral-900), $weight: 400);
+                text-transform: uppercase;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 16px;
+            }
         }
 
         .featured-keynote {
-
+            padding: 20px 16px;
+            background-color: var(--color-cyan-100);
         }
     }
 }

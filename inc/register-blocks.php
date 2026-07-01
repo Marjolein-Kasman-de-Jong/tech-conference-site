@@ -15,7 +15,7 @@ function register_blocks() {
     wp_register_script(
         'theme-block-editor',
         get_theme_file_uri('/assets/js/main.js'),
-        ['wp-blocks', 'wp-element', 'wp-i18n'],
+        ['wp-blocks', 'wp-element', 'wp-i18n', 'wp-block-editor'],
         filemtime(get_theme_file_path('/assets/js/main.js')),
         false
     );
