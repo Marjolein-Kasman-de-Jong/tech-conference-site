@@ -1,7 +1,7 @@
 <?php
 
 function add_custom_block_categories( $block_categories ) {
-    // Voeg custom categorie toe aan het begin
+    // Add the custom category at the beginning.
     array_unshift( $block_categories, [
         'slug'  => 'tech-conference-site-blocks',
         'title' => __( 'Tech Conference Site Blocks', 'tech-conference-site' )
@@ -20,11 +20,11 @@ function register_blocks() {
         false
     );
 
-    // Registreer het block; block.json koppelt de editor-script-handle.
+    // Register the block; block.json links the editor script handle.
     register_block_type(get_template_directory() . '/blocks/hero');
 }
 
-// Filter voor block categorieën
+// Filter the block categories.
 add_filter( 'block_categories_all', 'add_custom_block_categories', 10, 1 );
 
 add_action('init', 'register_blocks', 9);

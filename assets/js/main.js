@@ -52,13 +52,13 @@
 				onChange: function(value) {
 					setAttributes({ buttonText: value });
 				}
-			}), window.wp.element.createElement(ToggleControl, {
+			}), window.wp.element.createElement("div", { style: { marginTop: "8px" } }, window.wp.element.createElement(ToggleControl, {
 				label: "Pijl in button tonen",
 				checked: attributes.showArrow,
 				onChange: function(value) {
 					setAttributes({ showArrow: value });
 				}
-			})));
+			}))));
 		},
 		save: function() {
 			return null;

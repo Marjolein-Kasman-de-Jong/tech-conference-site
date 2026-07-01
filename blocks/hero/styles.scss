@@ -132,6 +132,14 @@
                     .title {
                         @include text-preset-5($color: var(--color-neutral-900), $weight: 700);
                         text-transform: uppercase;
+
+                        @media screen and (min-width: $breakpoint-s) {
+                            max-width: 312px;
+
+                            @media screen and (min-width: $breakpoint-m) {
+                                max-width: 232px;
+                            }
+                        }
                     }
 
                     .details {
@@ -143,6 +151,11 @@
                 .button {
                     --button-color: var(--color-neutral-900);
                     margin-top: 24px;
+
+                    @media screen and (min-width: $breakpoint-s) {
+                        margin-top: 44px;
+                        max-width: 167px;
+                    }
                 }
             }
 
@@ -159,6 +172,7 @@
 
                     @media screen and (min-width: $breakpoint-m) {
                         width: 87.82%;
+                        right: -124px;
                     }
                 }
             }

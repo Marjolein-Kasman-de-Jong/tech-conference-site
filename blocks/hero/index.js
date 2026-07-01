@@ -63,15 +63,23 @@ if (typeof window !== 'undefined' && window.wp && window.wp.blocks && window.wp.
                             }
                         }
                     ),
-                    window.wp.element.createElement(ToggleControl, {
-                        label: 'Pijl in button tonen',
-                        checked: attributes.showArrow,
-                        onChange: function (value) {
-                            setAttributes({
-                                showArrow: value
-                            });
-                        }
-                    })
+                    window.wp.element.createElement(
+                        'div',
+                        {
+                            style: {
+                                marginTop: '8px'
+                            }
+                        },
+                        window.wp.element.createElement(ToggleControl, {
+                            label: 'Pijl in button tonen',
+                            checked: attributes.showArrow,
+                            onChange: function (value) {
+                                setAttributes({
+                                    showArrow: value
+                                });
+                            }
+                        })
+                    )
                 )
             );
         },

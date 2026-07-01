@@ -452,7 +452,7 @@ section > .content-wrapper,
 }
 .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
   font-family: "Chakra Petch", sans-serif;
-  line-height: 110%;
+  line-height: 120%;
   letter-spacing: 0;
   font-size: 1.5rem;
   font-weight: 700;
@@ -460,12 +460,6 @@ section > .content-wrapper,
 }
 @media screen and (min-width: 768px) {
   .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
-    font-size: 1.75rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-speaker .name {
-    line-height: 120%;
     font-size: 2rem;
   }
 }
@@ -508,6 +502,16 @@ section > .content-wrapper,
   color: var(--color-neutral-900);
   text-transform: uppercase;
 }
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details .title {
+    max-width: 312px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details .title {
+    max-width: 232px;
+  }
+}
 .hero .content-wrapper .featured-keynote .wrapper-left .featured-keynote-details .details {
   font-family: "JetBrains Mono", sans-serif;
   line-height: 140%;
@@ -520,6 +524,12 @@ section > .content-wrapper,
 .hero .content-wrapper .featured-keynote .wrapper-left .button {
   --button-color: var(--color-neutral-900);
   margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .hero .content-wrapper .featured-keynote .wrapper-left .button {
+    margin-top: 44px;
+    max-width: 167px;
+  }
 }
 .hero .content-wrapper .featured-keynote .wrapper-right {
   display: none;
@@ -537,6 +547,7 @@ section > .content-wrapper,
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .hero .content-wrapper .featured-keynote .wrapper-right {
     width: 87.82%;
+    right: -124px;
   }
 }
 

@@ -15,19 +15,14 @@
 
 @mixin text-preset-2($weight: 400, $color: var(--color-neutral-900)) {
     font-family: "Chakra Petch", sans-serif;
-    line-height: 110%;
+    line-height: 120%;
     letter-spacing: 0;
     font-size: 1.5rem;
     font-weight: $weight;
     color: $color;
 
     @media screen and (min-width: $breakpoint-s) {
-        font-size: 1.75rem;
-
-        @media screen and (min-width: $breakpoint-m) {
-            line-height: 120%;
-            font-size: 2rem;
-        }
+        font-size: 2rem;
     }
 }
 
