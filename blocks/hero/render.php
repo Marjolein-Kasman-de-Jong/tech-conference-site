@@ -112,8 +112,9 @@ if (!empty($keynote_events)) {
 <section class="hero">
     <div class="content-wrapper">
         <div class="slogan">
-            <h1>
-                <?php bloginfo("description"); ?>_
+            <?php $slogan = get_bloginfo('description'); ?>
+            <h1 aria-label="<?php echo esc_attr($slogan); ?>">
+                <span class="slogan-text" aria-hidden="true"><?php echo esc_html($slogan); ?></span><span class="slogan-cursor" aria-hidden="true">_</span>
             </h1>
             <div class="event-details">
                 <p class="date">

@@ -36,6 +36,37 @@
                 height: 152px;
                 border-bottom: 2px solid var(--color-neutral-900);
 
+                .slogan-word {
+                    display: inline-block;
+                    white-space: nowrap;
+                }
+
+                .slogan-character {
+                    visibility: hidden;
+
+                    &.is-visible {
+                        visibility: visible;
+                    }
+                }
+
+                .slogan-cursor {
+                    display: inline-block;
+                    width: 0;
+                    visibility: hidden;
+                    overflow: visible;
+                }
+
+                &.is-typing,
+                &.is-complete {
+                    .slogan-cursor {
+                        visibility: visible;
+                    }
+                }
+
+                &.is-complete .slogan-cursor {
+                    animation: slogan-cursor-blink 1s steps(1, end) infinite;
+                }
+
                 @media screen and (min-width: $breakpoint-s) {
                     height: 284px;
 
@@ -61,5 +92,23 @@
             // temp
             display: none;
         }
+    }
+}
+
+@keyframes slogan-cursor-blink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .slogan h1.is-complete .slogan-cursor {
+        animation: none;
     }
 }

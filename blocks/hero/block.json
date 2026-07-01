@@ -28,5 +28,6 @@
         "typography": false,
         "width": false
     },
-    "render": "file:./render.php"
+    "render": "file:./render.php",
+    "viewScript": "file:./animation.js"
 }
