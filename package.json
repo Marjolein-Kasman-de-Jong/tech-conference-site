@@ -1,0 +1,16 @@
+{
+  "name": "tech-conference-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles:watch": "sass --watch assets/styles/style.scss:assets/styles/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.107.1"
+  }
+}
