@@ -7,3 +7,10 @@
 @use "layout/header";
 @use "layout/main";
 @use "layout/footer";
+
+@use "sections/hero";
+@use "sections/tracks";
+@use "sections/featured-speakers";
+@use "sections/schedule-highlights";
+@use "sections/schedule";
+@use "sections/speakers";
