@@ -3,7 +3,7 @@
 
     if (!toggleButton) return;
 
-    const header = toggleButton.closest(".page-header");
+    const header = document.getElementById("page-header");
 
     if (!header) return;
 
