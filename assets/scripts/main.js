@@ -1,1 +1,1 @@
-console.log("test");
+import "./modules/toggleMenu.js";

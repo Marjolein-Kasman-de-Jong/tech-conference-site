@@ -1,0 +1,113 @@
+.page-header {
+    position: relative;
+    width: 100%;
+    height: 64px;
+    background-color: var(--color-neutral-900);
+
+    .header-bar {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-neutral-900);
+    }
+
+    .content-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--color-neutral-600);
+
+        .page-header-right {
+            .menu-toggle {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border: 1px solid var(--color-neutral-100);
+                background-color: transparent;
+
+                .menu-icon,
+                .close-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: opacity .3s ease-in-out;
+                }
+
+            }
+        }
+    }
+
+    &[data-menu-state="closed"] {
+        .primary-nav {
+            top: calc(-100vh - 64px);
+        }
+
+        .menu-toggle .menu-icon {
+            opacity: 1;
+        }
+
+        .menu-toggle .close-icon {
+            opacity: 0;
+        }
+    }
+
+    &[data-menu-state="open"] {
+        .primary-nav {
+            top: 64px;
+        }
+
+        .menu-toggle .menu-icon {
+            opacity: 0;
+        }
+
+        .menu-toggle .close-icon {
+            opacity: 1;
+        }
+    }
+
+    .primary-nav {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        width: 100%;
+        min-height: calc(100vh - 64px);
+        padding: 24px 16px;
+        background-color: var(--color-neutral-900);
+        transition: top .5s ease-in-out;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            width: 100%;
+
+            .primary-nav-item {
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px 24px;
+                    border: 1px solid;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: center;
+
+                    &[data-active="true"] {
+                        color: var(--color-green-200);
+                        border-color: var(--color-green-200);
+                    }
+
+                    &[data-active="false"] {
+                        border-color: var(--color-neutral-100);
+                        color: var(--color-neutral-100);
+                    }
+                }
+            }
+        }
+    }
+}

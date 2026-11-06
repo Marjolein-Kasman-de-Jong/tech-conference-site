@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,35 @@
 
     <script type="module" src="./assets/scripts/main.js"></script>
 </head>
+
 <body class="home">
-    <header class="page-header">
-        <div class="content-wrapper">
-            HEADER
+    <header class="page-header" data-menu-state="closed">
+        <div class="header-bar">
+            <div class="content-wrapper">
+                <a href="/" class="logo">
+                    <img src="/assets/images/logo.svg" alt="Devhorizon_26 logo" width="192" height="31">
+                </a>
+                <div class="page-header-right">
+                    <button id="menu-toggle" class="menu-toggle" type="button">
+                        <img class="menu-icon" src="/assets/images/icon-menu.svg" alt="" width="20" height="20">
+                        <img class="close-icon" src="/assets/images/icon-cross.svg" alt="" width="20" height="20">
+                    </button>
+                </div>
+            </div>
         </div>
+        <nav class="primary-nav text-preset-6-medium">
+            <ul>
+                <li class="primary-nav-item">
+                    <a href="/" data-active="true">Home</a>
+                </li>
+                <li class="primary-nav-item">
+                    <a href="schedule.html" data-active="false">Schedule</a>
+                </li>
+                <li class="primary-nav-item">
+                    <a href="speakers.html" data-active="false">Speakers</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="hero">
@@ -24,7 +49,7 @@
         </section>
         <section class="tracks">
             <div class="content-wrapper">
-                TRACKS                
+                TRACKS
             </div>
         </section>
         <section class="featured-speakers">
@@ -44,4 +69,5 @@
         </div>
     </footer>
 </body>
+
 </html>
