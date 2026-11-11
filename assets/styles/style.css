@@ -384,7 +384,7 @@ body .page-footer .content-wrapper {
   }
 }
 .page-header .primary-nav ul .primary-nav-item a:focus-visible {
-  border: none;
+  border-color: transparent;
   outline: 1px dashed var(--color-green-200);
   outline-offset: -1px;
 }

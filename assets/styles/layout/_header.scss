@@ -166,7 +166,7 @@
                     }
 
                     &:focus-visible {
-                        border: none;
+                        border-color: transparent;
                         outline: 1px dashed var(--color-green-200);
                         outline-offset: -1px;
                     }
